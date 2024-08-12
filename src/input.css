@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    transition: top 0.3s;
+  }
+  
+  .non-sticky-header {
+    position: relative;
+    top: auto;
+  }
+  
+
+
+
+.txt1{
+    
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #475467;
+}
+
+
+.layer{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    height:100vh;
+    background-color: #222;
+    padding: 2%;
+    overflow-x: hidden;
+}
+
+.layer img{
+    width: 50%;
+}
+
+.layer h1{
+    padding: 2%;
+    border-width: 5px;
+    text-align: center;
+    margin: 0;
+}
+
+#img{
+    height: 200vh;
+    background:url(/src/img/s.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sec2{
+    height: 100vh;
+    background: url(/src/img/u.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.text{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+}
+
+.text h1{
+    color: #fff;
+    font-size: 3em;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    line-height: 2.5em;
+}
+
+.text h1 span{
+    font-size: 4em;
+    font-weight: 900;
+    letter-spacing: 0em;
+    background:url(/src/img/pexels-kelly-1179532-2402233.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-img{
+    border-radius:50%;
+    width:30%;
+}
+
+
+.hide{
+    display: flex;
+    align-items: center;
+    height:100vh;
+    opacity :0;
+    filter: blur(5px);
+    transform: translate(-100%);
+    transition: all 1s;
+}
+.features{
+    display: flex;
+}
+.CARD-OFF{
+    display: none;
+}
+
+.show{
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+}
+.gallery-card{
+    display: flex;
+}
+.gallery{
+    position: relative;
+    width: 20%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.gallery img{
+    border-radius: 25px;
+}
+
+.hov{
+    position: absolute;
+    background:#1f3d4738;
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+    left:100%;
+    overflow: hidden;
+}
+.hov div{
+    background-color: #fff;
+    padding: 3% 5%;
+    border-radius: 5%;
+}
+
+.hov div:hover{
+    background-color: #f8f6f6;
+    padding: 3% 5%;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+
+.gallery:hover .hov{
+    left:0;
+    transition: 1s;
+}
+.Extra{
+    width: 20%;
+    border-radius: 25px;
+    border-width: 5px;
+    border-color: black;
+}
+.logos{
+    opacity :0;
+    transform: translate(-100%);
+    transition: all 1s;
+}
+
+.logo img{
+    width: 200px;
+}
+
+
+.small {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+}
+
+
+
+.about{
+    height: 120vh;
+    background: url(/src/img/u.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+.about-text{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: transparent;
+    
+}
+
+.about-text h1{
+    font-size: 4em;
+    font-weight: 900;
+    letter-spacing: 0em;
+    background:#e0c3c3;
+    background-size: cover;
+    background-attachment: fixed;
+    background-clip: text;
+    color: transparent;
+}
+.about-text p{
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: 0em;
+    background:url(/src/img/pexels-kelly-1179532-2402233.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-clip: text;
+    color: #fff;
+}
+.review{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+   /*  background: url(https://picsum.photos/id/122/1280/900?blur); */
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.rev-off{
+    display: none;
+}
+
+
+.card-item .r-img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border:3px solid #fff;
+    padding:4px;
+    
+}
+.card-item .star{
+    display: flex;
+    gap: 15px;
+}
+
+.card-item .star img{
+    height: 25px;
+    width: 25px;
+}
+.card-item{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    padding: 35px;
+    border-radius: 8px;
+    background-color: rgba(187, 209, 201, 0.2);
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    
+}
+
+.card-item h1{
+    font-size: 1.15rem;
+    color: #000000;
+    font-weight: 500;
+    margin: 20px 0px ;
+
+}
+.card-item p{
+    font-size: 1rem;
+    color: #000000;
+    
+
+}
+swiper-container {
+    width: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contact {
+    display: flex;
+    gap: 20px; 
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .Form{
+    width: 50%;
+  }
+  .contact-us{
+    width: 50%;
+    height: 50vh;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+ 
+  .logo img{
+    width: 8%;
+  }
+   
+
+
+
